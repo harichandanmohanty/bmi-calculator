@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <form onsubmit="return false;">
+            <h1>BMI Calculator</h1>
+            <p>
+                Required fields are followed by
+                <strong><span aria-label="required">*</span></strong>.
+              </p>
+            <section>
+                <p>
+                    <label for="weight">Weight <span aria-label="required">*</span></label>
+                    <input type="text" inputmode="numeric" id="weight" name="user_weight" required>
+                </p>
+    
+                <p>
+                    <label for="height">Height <span aria-label="required">*</span></label>
+                    <input type="text" inputmode="numeric" id="height" name="user_height" required>
+                </p>
+            </section>
+            <section>
+                <button id="calulate-bmi">Calculate</button>
+            </section>
+        </form>
+        <section>
+            <p id="output"></p>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
