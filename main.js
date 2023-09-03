@@ -2,6 +2,7 @@ const weight = document.querySelector('#weight');
 const height = document.querySelector('#height');
 const calulateButton = document.querySelector('#calulate-bmi');
 const output = document.querySelector('#output');
+const form =document.querySelector('form');
 
 weight.addEventListener('change', () => {
     let isValid = /^-?\d+(\.\d+)?$/.test(weight.value);
@@ -23,5 +24,9 @@ function calculateBMI() {
 
 calulateButton.addEventListener('click', () => {
     output.textContent = calculateBMI();
+});
+
+form.addEventListener('submit',(e) => {
+    e.preventDefault();
 });
 
