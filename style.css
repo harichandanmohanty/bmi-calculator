@@ -73,7 +73,6 @@ h1 {
     padding: 10px;
 }
 
-
 p,button,input {
     font-size: calc(16px + 0.390625vw);
     padding: 10px;
@@ -86,3 +85,20 @@ label,input {
     padding: 10px;
     margin: 2px;
 }
+
+.weight-input-error,
+.height-input-error {
+    font-size: 15px;
+    color: red;
+}
+
+.hide-error-msg
+{
+    visibility: hidden;
+}
+
+.show-error-msg {
+    visibility: visible;
+}
+
+

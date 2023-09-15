@@ -15,17 +15,19 @@
                     <strong><span aria-label="required">*</span></strong>.
                   </p>
                 <p>
-                    <label for="weight">Weight <span aria-label="required">*</span></label>
+                    <label for="weight">Weight <span aria-label="required">*</span> (in kg)</label>
                     <input type="text" inputmode="numeric" id="weight" name="user_weight" required>
+                    <p class="weight-input-error hide-error-msg">* Enter a number > 1 for weight</p>
                 </p>
     
                 <p>
-                    <label for="height">Height <span aria-label="required">*</span></label>
+                    <label for="height">Height <span aria-label="required">*</span> (in cm)</label>
                     <input type="text" inputmode="numeric" id="height" name="user_height" required>
+                    <p class="height-input-error hide-error-msg">* Enter a number > 1 for height</p>
                 </p>
             </section>
             <section>
-                <button id="calulate-bmi">Calculate</button>
+                <button class="calulate-bmi" disabled>Calculate</button>
             </section>
         </form>
         <section>
