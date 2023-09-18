@@ -2,6 +2,7 @@ const weight = document.querySelector('#weight');
 const height = document.querySelector('#height');
 const calulateButton = document.querySelector('.calulate-bmi');
 const output = document.querySelector('#output');
+const outputWeightStatus = document.querySelector('#weight-status');
 const form =document.querySelector('form');
 const weightError = document.querySelector(".weight-input-error");
 const heightError = document.querySelector(".height-input-error");
@@ -39,14 +40,27 @@ function enableDisableButton() {
         calulateButton.setAttribute('disabled', true);
     }
     output.textContent = '';
+    outputWeightStatus.textContent = '';
 }
 
 function calculateBMI() {
-    return ((weight.value*10000)/(height.value*height.value)).toFixed(3);
+    return ((weight.value*10000)/(height.value*height.value)).toFixed(2);
 }
 
 calulateButton.addEventListener('click', () => {
-    output.textContent = calculateBMI();
+    const bmiValue = calculateBMI();
+    let bmiStatus = '';
+    if (bmiValue < 18.5) {
+        bmiStatus = 'Underweight'
+    } else if (bmiValue >= 18.5 && bmiValue < 24.9) {
+        bmiStatus = 'Healthy Weight';
+    } else if (bmiValue >= 24.9 && bmiValue < 29.9) {
+        bmiStatus = 'Overweight';
+    } else {
+        bmiStatus = 'Obesity';
+    }
+    output.textContent = `BMI - ${bmiValue}`;
+    outputWeightStatus.textContent = `Weight Status - ${bmiStatus}`;
 });
 
 form.addEventListener('submit',(e) => {
