@@ -76,15 +76,6 @@ h1 {
     text-align: center;
 }
 
-p {
-    max-width: 325px;
-    margin: 0px auto;
-}
-
-input, label {
-    display: inline-block;
-}
-
 @media only screen and (max-width: 410px){
     .box {
         width: 90vw;
@@ -107,9 +98,18 @@ section {
     padding: 10px;
 }
 
-button,input,label {
+input, label {
+    display: inline-block;
+}
+
+p,button,input,label {
     font-size: calc(16px + 0.390625vw);
     margin: 15px 0px;
+}
+
+p {
+    max-width: 325px;
+    margin: 0px auto;
 }
 
 input, button {
