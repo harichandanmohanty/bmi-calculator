@@ -71,19 +71,35 @@ h1 {
     border: 2px solid rgb(108 160 169);
     border-radius: 10px;
     height: 700px;
+    min-width: 260px;
     margin: 10px auto;
     text-align: center;
 }
 
-@media only screen and (max-width: 380px){
+p {
+    max-width: 325px;
+    margin: 0px auto;
+}
+
+input, label {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 410px){
     .box {
         width: 90vw;
     }
 }
 
-@media only screen and (min-width: 380px){
+@media only screen and (min-width: 410px){
     .box {
-        width: 350px;
+        width: 400px;
+    }
+}
+
+@media only screen and (width: 410px){
+    .box {
+        width: 390px;
     }
 }
 
@@ -91,7 +107,7 @@ section {
     padding: 10px;
 }
 
-p,button,input,label {
+button,input,label {
     font-size: calc(16px + 0.390625vw);
     margin: 15px 0px;
 }
