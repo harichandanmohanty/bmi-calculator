@@ -70,11 +70,21 @@ h1 {
 .box {
     border: 2px solid rgb(108 160 169);
     border-radius: 10px;
-    max-width: 400px;
-    min-width: 220;
     height: 700px;
     margin: 10px auto;
     text-align: center;
+}
+
+@media only screen and (max-width: 380px){
+    .box {
+        width: 90vw;
+    }
+}
+
+@media only screen and (min-width: 380px){
+    .box {
+        width: 350px;
+    }
 }
 
 section {
@@ -109,5 +119,6 @@ input, button {
 .show-error-msg {
     visibility: visible;
 }
+
 
 
